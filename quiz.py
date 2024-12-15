@@ -11,8 +11,8 @@ class Question: # This is a class or bluebrint/format of a question
             print(self.question + "\n")
             for choice in self.choices: # this is going through each item in the list
                 print(choice)
-            answer_input = input().strip().lower() #We use strip becasue of potential spaces
-            if answer_input in self.answer:
+            answer_input = input().strip().lower() #We use lower and strip becasue of potential spaces and want to normalize
+            if answer_input in self.answer: # this is also to check if the answer input is in the list of answers
                 print('Next Question...')
                 break
             else:
